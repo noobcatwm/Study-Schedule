@@ -249,8 +249,8 @@
         <label>任務類型</label>
         <select id="task-type" onchange="toggleFormFields()">
           <option value="study">一般讀書</option>
-          <option value="exam">重大考試 (不順延)</option>
-          <option value="periodic">週期記憶 (1-3-7-14)</option>
+          <option value="exam">重大考試</option>
+          <option value="periodic">週期記憶 (1-3-7-14-30)</option>
         </select>
       </div>
 
@@ -309,7 +309,7 @@
     const REVIEW_INTERVALS = [1, 3, 7, 14, 30];
 
     let tasks = JSON.parse(localStorage.getItem(DB_TASKS) || '[]');
-    let capacities = JSON.parse(localStorage.getItem(DB_CAPS) || '[5,5,5,5,2,5,5]');
+    let capacities = JSON.parse(localStorage.getItem(DB_CAPS) || '[5,5,5,5,5,5,5]');
     let recentColors = JSON.parse(localStorage.getItem(DB_COLORS) || '["#0a84ff", "#ff9f0a", "#bf5af2"]');
     let selectedDateStr = "";
 
